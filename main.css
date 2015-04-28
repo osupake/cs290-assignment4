@@ -1,0 +1,22 @@
+fieldset {
+	width: 300px;
+	margin-bottom: 20px;
+}
+
+ul li {
+	list-style: none;
+	padding-bottom: 5px;
+}
+
+ul {
+	padding-left: 0px;
+}
+
+.formContainer {
+    width: 300px;
+    clear: both;
+}
+.formContainer input {
+    width: 100%;
+    clear: both;
+}

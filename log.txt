@@ -1,3 +1,7 @@
+Start: Tue, 28 Apr 2015 16:30:00 -0400
+End: Tue, 28 Apr 2015 17:02:22 -0400
+Tasks: worked on making valid html5 document for multtable.php
+
 Start: Tue, 28 Apr 2015 15:00:00 -0400
 End: Tue, 28 Apr 2015 16:23:19 -0400
 Tasks: worked on multiplication table

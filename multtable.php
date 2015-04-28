@@ -1,3 +1,19 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Multiplcation Table Results</title>
+	<style>
+		th, td {
+			width: 50px;
+		}
+		th {
+			text-align: left;
+		}
+	</style>
+</head>
+<body>
+
 <?php
 	if($_GET["min-multiplicand"] >= $_GET["max-multiplicand"]) {
 		echo "Minimum multiplicand is larger than maximum.";
@@ -14,42 +30,36 @@
 		$height_start = $_GET["min-multiplicand"];
 		$width_start = $_GET["min-multiplier"];
 
-		echo('<!doctype html><html><meta charset="utf-8"><head><title>Multiplcation Table Results</title>
-			<style>
-			th, td {
-				width: 50px;
-			}
-			th {
-				text-align: left;
-			}
-			</style></head><body><table>');
+		echo('<table>');
 		echo('<thead><tr><th></th>');
 
-		while($width_start <= $width) {
+		while($width_start <= $width) { //print multiplier row
 			echo '<th>';
 			echo $width_start;
 			echo "</th>";
 			$width_start++;
 		}
-		echo "</tr></thead>";
+		echo "</tr></thead><tbody>";
 
 		while($height_start <= $height) {
-			echo "<tbody><tr>";
+			echo "<tr>";
 			echo "<th>";
-			echo $height_start;
+			echo $height_start; //print multiplicand value
 			echo "</th>";
 
 			$width_start = $_GET["min-multiplier"];
 			while($width_start <= $width) {
-				$value = $height_start * $width_start;
+				$value = $height_start * $width_start; //multiplicand * multiplier
 				echo '<td>';
 				echo $value;
 				echo "</td>";
 				$width_start++;
 			}
 			$height_start++;
-			echo "</tr></tbody>";
+			echo "</tr>";
 		}
-		echo "</table></body></html>";
+		echo "</tbody></table>";
 	}
 ?>
+</body>
+</html>
