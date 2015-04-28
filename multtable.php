@@ -1,46 +1,55 @@
 <?php
 	if($_GET["min-multiplicand"] >= $_GET["max-multiplicand"]) {
 		echo "Minimum multiplicand is larger than maximum.";
-	}
-	if($_GET["min-multiplier"] >= $_GET["max-multiplier"]) {
+	} else if($_GET["min-multiplier"] >= $_GET["max-multiplier"]) {
 		echo "Minimum multiplier is larger than maximum.";
-	}
+	} else {
 
-	$height = $_GET["max-multiplicand"];
-	$width = $_GET["max-multiplier"];
+		$height = $_GET["max-multiplicand"];
+		$width = $_GET["max-multiplier"];
 
-	//var_dump($height);
-	//var_dump($width);
+		//var_dump($height);
+		//var_dump($width);
 
-	$height_start = $_GET["min-multiplicand"];
-	$width_start = $_GET["min-multiplier"];
-
-	echo("<table>");
-	echo('<th width="50px"></th>');
-
-	while($width_start <= $width) {
-		echo '<th width="50px" align="left">';
-		echo $width_start;
-		echo "</th>";
-		$width_start++;
-	}
-	echo "<br>";
-
-	while($height_start <= $height) {
-		echo "<tr>";
-		echo "<th>";
-		echo $height_start;
-		echo "</th>";
-
+		$height_start = $_GET["min-multiplicand"];
 		$width_start = $_GET["min-multiplier"];
+
+		echo('<!doctype html><html><meta charset="utf-8"><head><title>Multiplcation Table Results</title>
+			<style>
+			th, td {
+				width: 50px;
+			}
+			th {
+				text-align: left;
+			}
+			</style></head><body><table>');
+		echo('<thead><tr><th></th>');
+
 		while($width_start <= $width) {
-			$value = $height_start * $width_start;
-			echo '<td width="50px">';
-			echo $value;
-			echo "</td>";
+			echo '<th>';
+			echo $width_start;
+			echo "</th>";
 			$width_start++;
 		}
-		$height_start++;
-		echo "</tr>";
+		echo "</tr></thead>";
+
+		while($height_start <= $height) {
+			echo "<tbody><tr>";
+			echo "<th>";
+			echo $height_start;
+			echo "</th>";
+
+			$width_start = $_GET["min-multiplier"];
+			while($width_start <= $width) {
+				$value = $height_start * $width_start;
+				echo '<td>';
+				echo $value;
+				echo "</td>";
+				$width_start++;
+			}
+			$height_start++;
+			echo "</tr></tbody>";
+		}
+		echo "</table></body></html>";
 	}
 ?>
