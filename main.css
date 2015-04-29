@@ -1,6 +1,25 @@
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#left {
+	float: left;
+	width: 470px;
+}
+
+#right {
+	float: right;
+	width: 470px;
+}
+
 fieldset {
-	width: 300px;
+	width: 350px;
 	margin-bottom: 20px;
+}
+
+body {
+	font-family: Verdana, sans-serif;
 }
 
 ul li {
@@ -13,10 +32,11 @@ ul {
 }
 
 .formContainer {
-    width: 300px;
+    width: 100%;
     clear: both;
 }
 .formContainer input {
     width: 100%;
     clear: both;
 }
+

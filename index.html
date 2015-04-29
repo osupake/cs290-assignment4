@@ -8,50 +8,72 @@
 <body>
 	<header>
 	</header>
-		
-		<div class="formContainer">
-		<form action="multtable.php" method="get">
-			<fieldset>
-			<label>Multiplication Table</label>
-				<ul>
-					<li><label for="min-multiplicand">Min multiplicand</label> <input type="number" name="min-multiplicand" id="min-multiplicand" min="0"></li>
-					<li><label for="max-multiplicand">Max multiplicand </label><input type="number" name="max-multiplicand" id="max-multiplicand" min="0"></li>
-					<li><label for="min-multiplier">Min multiplier </label><input type="number" name="min-multiplier" id="min-multiplier" min="0"></li>
-					<li><label for="max-multiplier">Max multiplier </label><input type="number"name="max-multiplier" id="max-multiplier" min="0"></li>
-				</ul>
-				<input type="submit" value="Generate Table">
-			</fieldset>
-		</form>
-		</div>	
-		
-		<div class="formContainer">
-		<form action="loopback.php" method="post">
-			<fieldset>
-			<label>Enter your favorite (post)</label>
-				<ul>
-					<li><label for="color">Color </label> <input type="text" name="color" id="color"></li>
-					<li><label for="season">Season </label> <input type="text" name="season" id="season"></li>
-					<li><label for="animal">Animal </label> <input type="text" name="animal" id="animal"></li>
-				</ul>
-				<input type="submit" value="Submit">
-			</fieldset>
-		</form>
+		<div id="wrapper">
+			<div id="left">
+				<h1>Multiplication Table</h1>
+				<div class="formContainer">
+				<form action="multtable.php" method="get">
+					<fieldset>
+						<ul>
+							<li><label for="min-multiplicand">Min multiplicand</label><input type="number" name="min-multiplicand" id="min-multiplicand" min="0"></li>
+							<li><label for="max-multiplicand">Max multiplicand</label><input type="number" name="max-multiplicand" id="max-multiplicand" min="0"></li>
+							<li><label for="min-multiplier">Min multiplier</label><input type="number" name="min-multiplier" id="min-multiplier" min="0"></li>
+							<li><label for="max-multiplier">Max multiplier</label><input type="number"name="max-multiplier" id="max-multiplier" min="0"></li>
+						</ul>
+						<input type="submit" value="Generate Table">
+					</fieldset>
+				</form>
+				</div>	
+			</div>
+			
+			<div id="right">
+				<h1>Loopback</h1>
+				<div class="formContainer">
+				<form action="loopback.php" method="post">
+					<fieldset>
+					<label>POST: enter favorites</label>
+						<ul>
+							<li><label for="color">Color </label> <input type="text" name="color" id="color"></li>
+							<li><label for="animal">Animal </label> <input type="text" name="animal" id="animal"></li>
+						</ul>
+						<input type="submit" value="Submit">
+					</fieldset>
+				</form>
+				</div>
 
-		<div class="formContainer">
-		<form action="loopback.php" method="get">
-			<fieldset>
-			<label>Enter your favorite (get)</label>
-				<ul>
-					<li><label for="color">Color </label> <input type="text" name="color" id="color"></li>
-					<li><label for="season">Season </label> <input type="text" name="season" id="season"></li>
-					<li><label for="animal">Animal </label> <input type="text" name="animal" id="animal"></li>
-				</ul>
-				<input type="submit" value="Submit">
-			</fieldset>
-		</form>
+				<div class="formContainer">
+				<form action="loopback.php" method="post">
+					<fieldset>
+					<label>POST: send no key value pairs</label>
+						<input type="submit" value="Submit">
+					</fieldset>
+				</form>
+				</div>
 
-		</div>
-	<footer>
-	</footer>
+				<div class="formContainer">
+				<form action="loopback.php" method="get">
+					<fieldset>
+					<label>GET: enter favorites</label>
+						<ul>
+							<li><label for="color">Color </label> <input type="text" name="color" id="color"></li>
+							<li><label for="animal">Animal </label> <input type="text" name="animal" id="animal"></li>
+						</ul>
+						<input type="submit" value="Submit">
+					</fieldset>
+				</form>
+				</div>
+
+				<div class="formContainer">
+				<form action="loopback.php" method="get">
+					<fieldset>
+					<label>GET: send no key value pairs</label>
+						<input type="submit" value="Submit">
+					</fieldset>
+				</form>
+				</div>
+			</div>
+		<footer>
+		</footer>
+	</div>
 </body>
 </html>
