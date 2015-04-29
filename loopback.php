@@ -1,4 +1,7 @@
 <?php
+	error_reporting(E_ALL);
+	ini_set('display_errors', 'On');
+	
 	$type = $_SERVER['REQUEST_METHOD'];
 	//$counter = count($_GET);
 	//echo $counter;

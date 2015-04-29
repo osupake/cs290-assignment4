@@ -1,3 +1,7 @@
+Start: Tue, 28 Apr 2015 18:20:00 -0400
+End: Tue, 28 Apr 2015 20:33:33 -0400
+Tasks: started login.php. added feature to reject null or empty usernames
+
 Start: Tue, 28 Apr 2015 17:30:00 -0400
 End: Tue, 28 Apr 2015 18:22:03 -0400
 Tasks: started on loopback.php. currently returns request method and basic parameters
