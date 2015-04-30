@@ -1,3 +1,7 @@
+Start: Tue, 28 Apr 2015 20:50:00 -0400
+End: Tue, 28 Apr 2015 20:56:36 -0400
+Tasks: fixed multtable.php w3c html validation
+
 Start: Tue, 28 Apr 2015 18:20:00 -0400
 End: Tue, 28 Apr 2015 20:33:33 -0400
 Tasks: started login.php. added feature to reject null or empty usernames
